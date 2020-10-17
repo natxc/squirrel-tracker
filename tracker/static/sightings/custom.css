@@ -1,0 +1,120 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+body {
+  height: auto;
+}
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+position: relative;
+min-height: 100%;
+padding-bottom: 20px;
+overflow: auto;
+}
+.head {
+margin-bottom: 50px;
+}
+
+/* The styles for the parallax */
+.hero {
+position: relative;
+height: 500px;
+padding: 20px;
+background: black;
+background-image: url("squirrel-tracker-home.jpg");
+background-attachment: fixed;
+background-position: bottom center;
+background-size: cover;
+}
+.hero h1 {
+margin-top: 10%;
+margin-right: 5%;
+font-size: 100px;
+animation: title 1.2s forwards linear;
+text-align: right;
+color: rgb(46, 43, 43);
+}
+
+
+/* FEATURETTE */
+
+
+/* panels to card*/
+
+.card {
+  height: 110px;
+  border-width: 3px;
+}
+
+.card-body {
+  padding: 10px 10px;
+}
+.card-heading {
+  background-color: #27608a;
+}
+
+.card-title {
+  color: rgb(107, 44, 44);
+  font-size: 18px;
+  text-align: center;
+}
+
+.col-md {
+  padding-top: 40px; 
+  padding-bottom: 40px;
+  padding-left: 15px;
+}
+
+.col-md-5 {
+    padding: 3px;
+    background: green;
+    background-clip: padding-box;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 50px;
+  padding: 10px
+}
+
+.col-md-auto {
+  margin-top: 40px;
+}
+
+/* Stats */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}

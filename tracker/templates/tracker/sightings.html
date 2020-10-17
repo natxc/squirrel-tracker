@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Squirrel Tracker Sightings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Main Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="custom.css">
+    
+  </head>
+  <body>
+
+     <!-- NAVBAR ----------------------------------------------- -->
+     <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:green">
+        <a class="navbar-brand" href="index.html">Squirrel Tracker</a>    
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav ml-auto mr-1">
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="stats.html">Statistics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="map.html">Map</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+<div class="container"> 
+
+<!-- TABLE ---------------------------- -->
+<div class="row justify-content-md-center">
+<div class="table-responsive-sm" style="padding-top: 40px; padding-bottom: 40px">
+    <a href="/sightings/add" role="button" class="btn btn-secondary btn-lg btn-block">Click to add a new sighting</a>
+    <hr>
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">#ID</th>
+              <th scope="col">Date</th>
+              <th scope="col">Fur</th>
+              <th scope="col">Location</th>
+              <th scope="col">Link to edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Today</td>
+              <td>Black</td>
+              <td>Tree</td>
+              <td><a href="{% url 'edit_squirrel' squirrel.unique_squirrel_id %}">Edit</a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Tomorrow</td>
+              <td>Red</td>
+              <td>Fence</td>
+              <td><a href="{% url 'edit_squirrel' squirrel.unique_squirrel_id %}">Edit</a></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Yesterday</td>
+              <td>Grey</td>
+              <td>Above Ground</td>
+              <td><a href="{% url 'edit_squirrel' squirrel.unique_squirrel_id %}">Edit</a></td>
+            </tr>
+    </table>
+</div></div>
+
+</div>
+<hr>
+    <!-- FOOTER -------------------------------------------------------------------------------------->
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2020 Natalie Crow and John Kim</p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Squirrel Tracker Add Sighting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Main Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Our CSS -->
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'sightings/custom.css' %}">
+    
+  </head>
+  <body>
+
+     <!-- NAVBAR ----------------------------------------------- -->
+     <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:green">
+        <a class="navbar-brand" href="index.html">Squirrel Tracker</a>    
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav ml-auto mr-1">
+            <li class="nav-item">
+                <a class="nav-link" href="sightings.html">Sightings</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stats.html">Statistics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="map.html">Map</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+      <br>
+      <div class="container">
+        <h1>Add Squirrel Sighting</h1>
+        <hr>
+         <form method="post">
+              {% csrf_token %}
+          
+              {{ form.as_p }}
+              <br>
+              
+              <input class="btn btn-primary" type="submit" name="Submit" value="Submit" style="background-color: green">
+            </form>
+          
+      </div>
+    </div>
+
+<hr>
+    <!-- FOOTER -------------------------------------------------------------------------------------->
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2020 Natalie Crow and John Kim</p>
+    </footer>
+
+
+</body>
+</html>
+

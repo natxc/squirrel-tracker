@@ -62,8 +62,8 @@ class Squirrel(models.Model):
             help_text=_('Primary Color of Squirrel'),
             )
 
-    Ground_plane = 'Ground_Plane'
-    Above_ground = 'Above_Ground'
+    Ground_Plane = 'Ground_Plane'
+    Above_Ground = 'Above_Ground'
     Location_Choices = (
             (Ground_Plane, _('Ground_Plane')),
             (Above_Ground, _('Above_Ground')),

@@ -32,5 +32,19 @@ def add(request):
                 'form': form
                  }
         return render(request, 'tracker/add.html', context)
-            
+
+def stats(request): 
+    total_seen = Squirrel.objects.all().count()
+    adults_seen = Squirrel.objects.filter(age='Adult').count()
+    juvenile_seen = Squirrel.objects.filter(age='Juvenile').count()
+    number_running = Squirrel.objects.filter(running=True).count()
+    number_climbing = Squirrel.objects.filter(climbing=True).count()
+    context = {
+            'total_seen': total_seen,
+            'adults_seen': adults_seen,
+            'juvenile_seen': juvenile_seen,
+            'number_running': number_running,
+            'number_climbing': number_climbing,
+            }
+    return render(request, 'tracker/stats.html', context)
 

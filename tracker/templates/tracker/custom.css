@@ -23,7 +23,7 @@ position: relative;
 height: 500px;
 padding: 20px;
 background: black;
-background-image: url("squirrel-tracker-home.jpg");
+background-image: url("/static/squirrel-tracker-home.jpg");
 background-attachment: fixed;
 background-position: bottom center;
 background-size: cover;

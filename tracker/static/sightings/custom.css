@@ -23,6 +23,8 @@ position: relative;
 height: 500px;
 padding: 20px;
 background: black;
+/* ~/squirrel-tracker-project/project/tracker/static
+/sightings */
 background-image: url("squirrel-tracker-home.jpg");
 background-attachment: fixed;
 background-position: bottom center;

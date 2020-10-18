@@ -1,4 +1,3 @@
-{ % load static  % }
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Our CSS -->
-    <link rel="stylesheet" href="{% static "sightings/custom.css" %}">
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'sightings/custom.css' %}">
   </head>
 
   <!-- BODY ------------------------------------------------- -->
@@ -60,7 +60,7 @@
             <p><a class="btn btn-secondary" href="sightings.html" role="button" style="background-color: green;">View sightings &raquo;</a></p>
         </div>
         <div class="col-md-5">
-		<img src="{% static "tracker/sightings.jpg" %}" class="img-thumbnail">
+		<img src="{% static "sightings/sightings.jpg" %}" class="img-thumbnail">
         </div>
     </div>
 
@@ -86,7 +86,7 @@
             <p><a class="btn btn-secondary" href="stats.html" role="button" style="background-color: green">View stats &raquo;</a></p>
         </div>
         <div class="col-md-5">
-            <img src="stats.jpg" class="img-thumbnail">
+		<img src="{% static "sightings/stats.jpg" %}" class="img-thumbnail">
         </div>
     </div>
 

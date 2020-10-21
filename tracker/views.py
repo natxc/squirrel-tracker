@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from tracker.models import Squirrel
 from django.http import HttpResponse, HttpResponseRedirect
+from .forms import SquirrelAddForm
+
 
 
 def index(request):
@@ -32,6 +34,20 @@ def add(request):
                 'form': form
                  }
         return render(request, 'tracker/add.html', context)
+
+def update(request, squirrel_id):
+    squirrel = Squirrel.objects.get(Unique_Squirrel_ID=squirrel_id)
+    if request.method =="POST":
+        form = SquirrelAddForm(request.POST, instance=squirrel)
+        if form.is_valid():
+            form.save()
+            return redirect('tracker:sightings')
+        else:
+            form = SquirrelAddForm(instance=squirrel)
+        context = {
+                'form': form
+                 }
+        return render(request, 'tracker/update.html', context)
 
 def stats(request): 
     total_seen = Squirrel.objects.all().count()

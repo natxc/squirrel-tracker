@@ -10,4 +10,6 @@ urlpatterns = [
         path('sightings.html', views.sightings, name='sightings'),
         path('sightings/add', views.add, name='add'),
         path('sightings/stats', views.stats, name='stats'),
+        path('<squirrel_id>/', views.update, name='update'),
+
 ]

@@ -33,7 +33,7 @@ def add(request):
         context = {
                 'form': form
                  }
-        return render(request, 'tracker/add.html', context)
+        return render(request, 'tracker/sightings/add.html', context)
 
 def update(request, Unique_Squirrel_ID):
     squirrel = Squirrel.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)

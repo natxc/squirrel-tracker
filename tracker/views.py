@@ -27,13 +27,11 @@ def add(request):
         form = SquirrelAddForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('')
-        else:
-            form = SquirrelAddForm()
-        context = {
-                'form': form
-                 }
-        return render(request, 'tracker/sightings/add.html', context)
+            return redirect('tracker:sightings')
+    else:
+        form = SquirrelAddForm()
+    context = {'form': form}           
+    return render(request, 'tracker/add.html', context)
 
 def update(request, Unique_Squirrel_ID):
     squirrel = Squirrel.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
@@ -42,12 +40,10 @@ def update(request, Unique_Squirrel_ID):
         if form.is_valid():
             form.save()
             return redirect('tracker:sightings')
-        else:
-            form = SquirrelAddForm(instance=squirrel)
-        context = {
-                'form': form
-                 }
-        return render(request, 'tracker/update.html', context)
+    else:
+        form = SquirrelAddForm(instance=squirrel)
+    context = {'form': form}
+    return render(request, 'tracker/update.html', context)
 
 def stats(request): 
     total_seen = Squirrel.objects.all().count()

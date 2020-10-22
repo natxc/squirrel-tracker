@@ -27,7 +27,7 @@ def add(request):
         form = SquirrelAddForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('tracker:sightings')
+            return HttpResponseRedirect('/sightings.html')
     else:
         form = SquirrelAddForm()
     context = {'form': form}           
@@ -39,7 +39,7 @@ def update(request, Unique_Squirrel_ID):
         form = SquirrelAddForm(request.POST, instance=squirrel)
         if form.is_valid():
             form.save()
-            return redirect('tracker:sightings')
+            return HttpResponseRedirect('/sightings.html')
     else:
         form = SquirrelAddForm(instance=squirrel)
     context = {'form': form}

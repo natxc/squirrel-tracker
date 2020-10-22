@@ -53,10 +53,15 @@ def stats(request):
     total_seen = Squirrel.objects.all().count()
     number_running = Squirrel.objects.filter(Running=True).count()
     number_climbing = Squirrel.objects.filter(Climbing=True).count()
+    juvenile_seen = Squirrel.objects.filter(Age='Juvenile').count()
+    adults_seen = Squirrel.objects.filter(Age='Adult').count()
+   
     context = {
             'total_seen': total_seen,
             'number_running': number_running,
             'number_climbing': number_climbing,
+            'juvenile_seen': juvenile_seen,
+            'adults_seen': adults_seen,
             }
     return render(request, 'tracker/stats.html', context)
 

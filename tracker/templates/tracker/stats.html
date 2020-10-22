@@ -30,6 +30,7 @@
         </div>
       </nav>
 
+
 <br>
       <div class="container">
   <h1>Squirrel Statistics from Squirrel Sightings</h1>
@@ -37,45 +38,41 @@
   <hr>
 </div>
 
-<div class="container">
-
-<p>There are no sightings. Please add one.</p>
+	#  <div class="container">
 
    <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+   
+     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Stat</h4>
+        <h4 class="my-0 font-weight-normal">Total Seen</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
-		  <li>Number</li>
-          <li> Number </li>
-          <li> Number </li>
+		<li>{{total_seen}}</li>
         </ul>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Stat</h4>
-      </div>
-      <div class="card-body">
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>Number</li>
-          <li>Number</li>
 
-          <li>Overall Number</li>
-        </ul>
-      </div>
-    </div>
+
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Stat</h4>
+        <h4 class="my-0 font-weight-normal">Number Running</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Number</li>
-          <li>Number</li>
-          <li>Number</li>
+		<li>{{number_running}}</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Number Climbing</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{number_climbing}}<li>
         </ul>
       </div>
     </div>
@@ -83,33 +80,28 @@
 	
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Stat</h4>
+        <h4 class="my-0 font-weight-normal">Adults Seen</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Number</li>
-          <li>Number</li>
-          <li>Number</li>
+          <li>{{adults_seen}}</li>
         </ul>
       </div>
     </div>
+    
+    
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Stat</h4>
+        <h4 class="my-0 font-weight-normal">Juveniles Seen</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Number</li>
-          <li>Number</li>
-          <li>Number</li>
+          <li>{{juvenile_seen}}</li>
         </ul>
       </div>
     </div>
-
-	
-  </div>
-
-
+	 
+   </div>
 </div>
 <hr>
     <!-- FOOTER -------------------------------------------------------------------------------------->

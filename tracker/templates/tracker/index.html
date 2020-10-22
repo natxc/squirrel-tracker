@@ -65,7 +65,7 @@
         <div class="col-md-7">
             <h2 class="featurette-heading">Statistics about Squirrel Sightings</h2>
             <p class="lead">Curious about certain demographics of the squirrels sighted so far? Want to see a summary of facts for these squirrels?</p>
-            <p><a class="btn btn-secondary" href="stats.html" role="button" style="background-color: green">View stats &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="{% url 'tracker:stats'  %}" role="button" style="background-color: green">View stats &raquo;</a></p>
         </div>
         <div class="col-md-5">
 		<img src="{% static "sightings/stats.jpg" %}" class="img-thumbnail">

@@ -16,7 +16,7 @@ def map(request):
     return render(request, 'tracker/map.html', context)
 
 def sightings(request):
-    squirrels = Squirrel.objects.all()
+    squirrels = Squirrel.objects.all().order_by('-Date')
     context = {
             'squirrels': squirrels
             }

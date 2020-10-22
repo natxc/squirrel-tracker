@@ -23,21 +23,21 @@ def sightings(request):
     return render(request, 'tracker/sightings.html', context)
 
 def add(request):
-    if request.method =="POST":
+    if request.method =='POST':
         form = SquirrelAddForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('tracker:sightings')
-        else: 
+            return HttpResponseRedirect('')
+        else:
             form = SquirrelAddForm()
         context = {
                 'form': form
                  }
-        return render(request, 'tracker/add.html', context)
+        return render(request, 'tracker/sightings/add.html', context)
 
-def update(request, squirrel_id):
-    squirrel = Squirrel.objects.get(Unique_Squirrel_ID=squirrel_id)
-    if request.method =="POST":
+def update(request, Unique_Squirrel_ID):
+    squirrel = Squirrel.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
+    if request.method =='POST':
         form = SquirrelAddForm(request.POST, instance=squirrel)
         if form.is_valid():
             form.save()
